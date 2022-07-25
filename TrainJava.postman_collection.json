@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "355a66c4-b087-4a1b-9480-bbd0a9e2d3e5",
+		"name": "TrainJava",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16190218"
+	},
+	"item": [
+		{
+			"name": "GET_ALL_APPLICATION",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0MkBnbWFpbC5jb20iLCJleHAiOjE2NTg3MDY2NzUsImlhdCI6MTY1ODY3Nzg3NX0.EKj_NHEjjOEynDb4n_7GVb08SIKc9KMyCe9ZspRk9ROF3cdWdI6DXpi_GwrMwJUiHyYZmuW3rjHHqMsQKcDjDA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/application",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"application"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "\bSIGNUP",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"RV1\",\r\n    \"password\": \"password\",\r\n    \"email\": \"t2@gmail.com\",\r\n    \"picture\": \"https://picture\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/authentication/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"authentication",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SIGNIN",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"password\",\r\n    \"email\": \"t2@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/authentication/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"authentication",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGOUT",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0MkBnbWFpbC5jb20iLCJleHAiOjE2NTg3MDY2NzUsImlhdCI6MTY1ODY3Nzg3NX0.EKj_NHEjjOEynDb4n_7GVb08SIKc9KMyCe9ZspRk9ROF3cdWdI6DXpi_GwrMwJUiHyYZmuW3rjHHqMsQKcDjDA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"password\",\r\n    \"email\": \"t1@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/authentication/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"authentication",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD_APPLICATION",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0MkBnbWFpbC5jb20iLCJleHAiOjE2NTg3MDY2MDQsImlhdCI6MTY1ODY3NzgwNH0.94_EOF2KqPLVAJOrpiwOXiQKGZ_1dAhs7sQnGAEcDT_tWFkPMkpCNydL0Ee-ETdjb2CETEUwHHPbxpTq12Ftxw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Son\",\r\n    \"email\": \"haha@gmail.com\",\r\n    \"gitUser\": \"haha\",\r\n    \"projects\": [\r\n        {\r\n            \"name\": \"REACT\",\r\n            \"employmentMode\": \"EMPLOYED\",\r\n            \"capacityStatus\": \"FULL_TIME\",\r\n            \"durationInMonths\": 2,\r\n            \"startYear\": 2020,\r\n            \"role\": \"admin\",\r\n            \"teamSize\": 4,\r\n            \"linkRepo\": \"http://github.com/repo\",\r\n            \"linkLive\": \"http://live.com\"\r\n        },\r\n        {\r\n            \"name\": \"VUE\",\r\n            \"employmentMode\": \"EMPLOYED\",\r\n            \"capacityStatus\": \"FULL_TIME\",\r\n            \"durationInMonths\": 2,\r\n            \"startYear\": 2020,\r\n            \"role\": \"admin\",\r\n            \"teamSize\": 4,\r\n            \"linkRepo\": \"http://github.com/repo\",\r\n            \"linkLive\": \"http://live.com\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/application",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"application"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE_APPLICATION",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Son\",\r\n    \"email\": \"sonhh@gmail.com\",\r\n    \"gitUser\": \"sonhh\",\r\n    \"projects\": [\r\n        {\r\n            \"name\": \"SON\",\r\n            \"employmentMode\": \"EMPLOYED\",\r\n            \"capacityStatus\": \"FULL_TIME\",\r\n            \"durationInMonths\": 2,\r\n            \"startYear\": 2020,\r\n            \"role\": \"admin\",\r\n            \"teamSize\": 4,\r\n            \"linkRepo\": \"http://github.com/repo\",\r\n            \"linkLive\": \"http://live.com\"\r\n        },\r\n        {\r\n            \"name\": \"CSS\",\r\n            \"employmentMode\": \"EMPLOYED\",\r\n            \"capacityStatus\": \"FULL_TIME\",\r\n            \"durationInMonths\": 2,\r\n            \"startYear\": 2020,\r\n            \"role\": \"admin\",\r\n            \"teamSize\": 4,\r\n            \"linkRepo\": \"http://github.com/repo\",\r\n            \"linkLive\": \"http://live.com\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/application/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"application",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE_APPLICATION",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/application/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"application",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EXPORT_PDF",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/application/export",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"application",
+						"export"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,14 @@
+- user: signup, singin, post_application, update_application
+- reviewer: signup, singin, get_application, export_pdf, detele_applicaton
+
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+.\bin\windows\kafka-server-start.bat .\config\server.properties
+.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic TestTopic
+
+
+.\bin\windows\kafka-topics.bat --create --topic topic-example --bootstrap-server localhost:9092
+.\bin\windows\kafka-console-producer.bat --topic topic-example --bootstrap-server localhost:9092
+
+.\bin\windows\kafka-console-consumer.bat --topic topic-example --from-beginning --bootstrap-server localhost:9092
+https://www.youtube.com/watch?v=aKDWWICgfA0
+cd C
